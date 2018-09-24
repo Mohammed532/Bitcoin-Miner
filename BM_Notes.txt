@@ -1,0 +1,22 @@
+Ideas
+1. Click on something(image maybe) to gain credits
+2. Leveling system
+3. image changes based on level(ex. coin to dollar to stack)(Edit: probaly not gonna happen)
+4. Have the cost multiplier increase after each purchase (Ex. 1st = 2.5, 2nd = 2.7, 3rd = 2.9 so on)
+
+Todo
+1. Actually write the code for the game to make it playable
+2. Fix the storeDiv overflow issue
+3. Add items to the store
+4. Have index background change colors gradually(preferrabaly using the color scheme)
+5. Have the clickerButton pulse when clicked
+6. Design webpage scroll bar
+7. Update item buttons(Make the text white and have it shift with the button when hovered over)
+
+Items
+1. Gpu
+2. better algoritms
+3. More computers
+4. ASIC miners
+
+"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe -new-tab"

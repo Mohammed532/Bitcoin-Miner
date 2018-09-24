@@ -1,0 +1,320 @@
+@font-face{
+	src: url(res/Acme-Regular.ttf);
+	font-family: Acme;
+}
+
+:root{
+	/*Color scheme variables*/
+	--CS-blue: #1e46d8;
+	--CS-light-blue: #5372e2;
+	--CS-dark-blue: #132772;
+	--CS-gold: #b57f0c;
+	--CS-tan: #e2b044;
+	--CS-green: #156d17;
+	--CS-light-green: #338c35;
+	--CS-dark-green: #024403;
+
+}
+
+::-webkit-scrollbar{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: var(--CS-gold);
+	border-radius: 10px;
+	box-shadow: inset 0 0 5px black;
+}
+
+::-webkit-scrollbar-track{
+	background-color: var(--CS-tan);
+	border-radius: 10px;
+
+}
+
+body.index{
+	animation-name: colorAlt; 
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+body{
+	margin: 0;
+	background-color: black;
+}
+
+h1{
+	display:block;
+	color: black;
+	width: 700px;
+	text-align: center;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Acme;
+	font-size: 100px;
+	background-color: var(--CS-tan);
+	border: 30px ridge var(--CS-tan);
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+p{
+	font-family: Acme;
+}
+
+#button{
+	display: block;
+	width: 300px;
+	text-align: center;
+	color: black;
+	font-family: Acme;
+	text-decoration: none;
+	font-size: 70px;
+	margin: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--CS-tan);
+	border: 5px outset var(--CS-tan);
+}
+
+#button:hover{
+	background-color: var(--CS-gold);
+	border-color: var(--CS-gold);
+	border-style: inset;
+}
+
+
+
+
+#fps{
+	color: white;
+	display: inline;
+	font-size: 15px;
+}
+
+#game{
+	height: 200;
+	background-color: black;
+	display: flex;
+	flex: nowrap;
+	align-items: flex-start;
+	margin-top: 10px;
+}
+
+
+#clickerDiv{
+	height: 600px;
+	flex: 2;
+	margin: 10px;
+	background-color: var(--CS-light-green);
+	overflow: auto;
+}
+
+#clickerDiv::-webkit-scrollbar{
+	width: 8px;
+}
+
+#clickerDiv::-webkit-scrollbar-thumb{
+	background-color: var(--CS-dark-green);
+	border-radius: 10px;
+	box-shadow: none;
+}
+
+#clickerDiv::-webkit-scrollbar-track{
+	background-color: inherit;
+	
+}
+
+#clickerButton{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	border: none;
+	background-color: inherit;
+	display: block;
+	text-align: center;
+	outline: none;
+}
+
+#clickerImg{
+	border-radius: 50%;
+	cursor: pointer;
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	user-drag: none;
+	user-select: none;
+}
+
+
+#credit, #creditRate{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	width: 200px;
+	color: white;
+	background-color: var(--CS-dark-green);
+	border: 3px inset var(--CS-dark-green);
+	text-align: center;
+	font-size: 30px;
+	font-family: Acme, sans-seriff;
+	display: block;
+}
+
+#storeDiv{
+	height: 586px;
+	max-height: 586px; 
+	border: 7px solid var(--CS-dark-blue);
+	margin: 10px;
+	background-color: var(--CS-blue);
+	overflow-y: scroll;
+	/*Game Div Flex*/	
+	display: block;
+	flex: 1;
+	/*Store Div Flex*/
+	flex-direction: column;
+
+}
+
+#storeDiv::-webkit-scrollbar{
+	width: 8px;
+}
+
+#storeDiv::-webkit-scrollbar-thumb{
+	background-color: var(--CS-light-blue);
+	border-radius: 10px;
+	box-shadow: none;
+}
+
+#storeDiv::-webkit-scrollbar-track{
+	background-color: inherit;
+	
+}
+
+#storeDiv::-moz-scrollbar{
+	width: 8px;
+}
+
+#storeDiv::-moz-scrollbar-thumb{
+	background-color: var(--CS-light-blue);
+	border-radius: 10px;
+/*	box-shadow: inset 0 0 10px black;*/
+}
+
+h2{
+	width: 75px;
+	font-family: Acme;
+	display: inline-block;
+	margin: 0;
+	padding-left: 17px;
+	padding-bottom: 5px;
+	border-bottom-right-radius: 20px;
+	background-color: var(--CS-dark-blue);
+	color: white;
+}
+
+.storeItems{
+	background-color: var(--CS-tan);
+	height: 75px;
+	width: 96%;
+	margin: 5px;
+	border: 3px outset var(--CS-tan);
+	position: relative;
+}
+
+.tooltip{
+	visibility: hidden;
+	position: absolute;
+	z-index: 5;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	left: -100px;
+}
+
+.storeItems:hover{
+	background-color: var(--CS-gold);
+	border-color: var(--CS-gold);
+	border-style: inset;
+}
+
+.storeItems button{
+	border: none;
+	background-color: inherit;
+	width: 100%;
+	height: 73px;
+	outline: none;
+}
+
+.storeItems button:hover > *{
+	margin-left: 5px;
+}
+
+.item{
+	text-align: left;
+	font-size: 20px;
+	margin: 0;
+	margin-bottom: 3%;
+	border-bottom: 3px solid black;
+}
+
+#costText{
+	display: inline; 
+	float: left; 
+	margin: 0;
+	margin-right: 3px;
+	font-size: 15px;
+}
+
+.itemCost{
+	display: inline;
+	float: left;
+	margin: 0;
+	font-size: 15px;
+
+}
+
+.itemRate{
+	display: inline-block;
+	float: left;
+	margin: 0;
+	margin-left: 25%;
+	font-size: 15px;
+}
+
+.itemX{
+	display: none;
+	float: right;
+	margin: 0;
+	margin-right: 10px;
+	padding: 3px 5px 3px 5px;
+	color: white;
+	background-color: var(--CS-dark-blue);
+	border-radius: 50%;
+	font-size: 13px;
+}
+
+/*Animations*/
+
+@keyframes spin{
+	from{ transform: rotateZ(-13deg) }
+	to{ transform: rotateZ(347deg) }
+}
+
+@keyframes pulse{
+	0%{transform: scale(1);}
+	50%{ transform: scale(1.2); }
+	100%{ transform: scale(1); }
+}
+
+@keyframes colorAlt{
+	0%{ background-color: black }
+	50%{ background-color: red }
+	100%{ background-color: black }
+}

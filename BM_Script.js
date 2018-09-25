@@ -70,7 +70,7 @@ function(){
 	if(Date.now() - lastTime >= 1000){
 		fpsPara.innerHTML = "FPS: " + fps;
 		fps = 0;
-		lastTime = Date.now();
+		lastTime = Date.now(); 
 	}
 	button.creditText.innerHTML = button.credit;
 	button.creditRateText.innerHTML = button.creditRate + "/s";

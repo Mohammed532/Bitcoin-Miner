@@ -86,14 +86,17 @@ function stopLoop(){
 class StoreItem{
 	constructor(itemNum){
 		this.itemNum = itemNum;
-		document.getElementsByClassName(itemButton)[this.itemNum].onclick = check();
+		document.getElementsByClassName("itemButton")[this.itemNum].onclick = this.check();
 	}
 	check(){
-		alert("working")
+		// alert("working")
+	}
+	info(){
+		
 	}
 }
 
-let item1 = new StoreItem;
+let item1 = new StoreItem(0);
 
 
 //////////////////ADMIN////////////////////////

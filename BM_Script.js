@@ -89,15 +89,17 @@ class StoreItem{
 		document.getElementsByClassName("itemButton")[this.itemNum].onclick = this.check();
 	}
 	check(){
-		// alert("working")
+		alert("item");
 	}
 	info(){
-		
+		const test = "working";
 	}
 }
 
-let item1 = new StoreItem(0);
+ let item1 = new StoreItem(0);
+// item1.onclick = function(){ console.log("hi")}
 
+// // console.log(item1.check());
 
 //////////////////ADMIN////////////////////////
 function $admin_changeClick(clickX){

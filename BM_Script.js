@@ -89,7 +89,7 @@ class StoreItem{
 		document.getElementsByClassName("itemButton")[this.itemNum].onclick = this.check();
 	}
 	check(){
-		alert("item");
+		console.log("check");
 	}
 	info(){
 		const test = "working";
@@ -97,6 +97,7 @@ class StoreItem{
 }
 
  let item1 = new StoreItem(0);
+ console.log(item1);
 // item1.onclick = function(){ console.log("hi")}
 
 // // console.log(item1.check());

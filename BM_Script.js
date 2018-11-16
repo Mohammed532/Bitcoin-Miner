@@ -56,6 +56,29 @@ var button = {
 
 button.clicker.onclick = function(){button.addOne();};
 
+var storeItem = {
+	
+	itemCost: document.getElementsByClassName("itemCost"),
+	debug: function(){
+		console.log(this.itemButton);
+	}
+}
+
+var itemButton = document.getElementsByClassName("itemButton");
+
+function buyItem(){
+		for(var i = 0; i <= itemButton.length; i++){
+			itemButton[0].onclick = function(e){
+				console.log(itemButton.id);
+				console.log(i);
+			}
+			/*
+				Put this in the storeButton html tag. Once one of them is clicked
+				have this function go through each tag to see which was clicked
+			*/ 
+		}
+	}
+
 // var storeButtonAmt = storeButtons.length;
 // for(var i = 1; i <= storeButtonAmt; i += 1){
 // 	storeButtons[i].onclick = function(e){
@@ -83,18 +106,18 @@ function stopLoop(){
 	console.log("Loop stopped");
 }
 
-class StoreItem{
-	constructor(itemNum){
-		this.itemNum = itemNum;
-		document.getElementsByClassName("itemButton")[this.itemNum].onclick = this.check();
-	}
-	check(){
-		alert("item");
-	}
-	info(){
-		const test = "working";
-	}
-}
+// class StoreItem{
+// 	constructor(itemNum){
+// 		this.itemNum = itemNum;
+// 		document.getElementsByClassName("itemButton")[this.itemNum].onclick = this.check();
+// 	}
+// 	check(){
+// 		alert("item");
+// 	}
+// 	info(){
+// 		const test = "working";
+// 	}
+// }
 
  let item1 = new StoreItem(0);
 // item1.onclick = function(){ console.log("hi")}
